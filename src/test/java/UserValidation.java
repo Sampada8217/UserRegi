@@ -1,8 +1,6 @@
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.net.HttpURLConnection;
-
 public class UserValidation {
     @Test
     public void FirstName_isProper_True() {
@@ -80,7 +78,7 @@ public class UserValidation {
     @Test
     public void PassWord_Rule_isValid_True() {
         UserValidator userValidator=new UserValidator();
-        boolean result = userValidator.validPasswordRule4("Sampadatir@123");
+        boolean result = userValidator.validPasswordRule("SamPada@1");
         Assert.assertEquals(true,result);
 
     }
@@ -88,7 +86,7 @@ public class UserValidation {
     @Test
     public void PassWord_Rule_isInvalid_False() {
         UserValidator userValidator=new UserValidator();
-        boolean result= userValidator.validPasswordRule4("Sampadatir");
+        boolean result= userValidator.validPasswordRule("Sampadatir");
         Assert.assertEquals(true,result);
     }
 

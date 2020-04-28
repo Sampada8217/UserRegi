@@ -38,4 +38,19 @@ public class UserValidator {
             return false;
         }
     }
+
+    public boolean validMobileFormat(String mobile) {
+
+        String patternMobileNumber="[1-9]{2} [0-9]{10}";
+        if(mobile.matches(patternMobileNumber))
+        {
+          return true;
+        }
+        else
+        {
+            return false;
+        }
+
+
+    }
 }

@@ -1,6 +1,8 @@
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.net.HttpURLConnection;
+
 public class UserValidation {
     @Test
     public void FirstName_isProper_True() {
@@ -52,5 +54,15 @@ public class UserValidation {
         boolean result=userValidator.validEmailId("sampada@bridgelabz.co.in");
         Assert.assertEquals(true,result);
     }
-    
+
+    @Test
+    public void MobileNo_isValidFormat_True() {
+        UserValidator userValidator=new UserValidator();
+        boolean result=userValidator.validMobileFormat("91 9541545454");
+        Assert.assertEquals(true,result);
+    }
+
+    @Test
+    public void () {
+    }
 }

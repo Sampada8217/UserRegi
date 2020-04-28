@@ -63,6 +63,11 @@ public class UserValidation {
     }
 
     @Test
-    public void () {
+    public void PassWord_Rule1_isValid_True() {
+        UserValidator userValidator=new UserValidator();
+        boolean result = userValidator.validPasswordRule1("sampadatir");
+        Assert.assertEquals(true,result);
+
     }
+
 }

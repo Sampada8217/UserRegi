@@ -54,8 +54,8 @@ public class UserValidator {
 
     }
 
-    public boolean validPasswordRule3(String pass) {
-       String patternPassword="[A-Z]{1,}[A-Za-z]{8,}[0-9]{1,}";
+    public boolean validPasswordRule4(String pass) {
+       String patternPassword="[A-Z]{1,}[A-Za-z]{8,}[#$%@]{1}[0-9]{1,}";
         if(pass.matches(patternPassword))
         {
             return true;

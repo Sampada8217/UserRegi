@@ -55,6 +55,13 @@ public class UserValidation {
         Assert.assertEquals(true,result);
     }
 
+    @Test
+    public void Email_isInvalid_False() {
+        UserValidator userValidator=new UserValidator();
+        boolean result=userValidator.validEmailId("sampada@yahoo");
+        Assert.assertEquals(true,result);
+
+    }
 
     @Test
     public void MobileNo_isValidFormat_True() {
@@ -64,9 +71,16 @@ public class UserValidation {
     }
 
     @Test
+    public void MobileNo_isInvalid_False() {
+        UserValidator userValidator=new UserValidator();
+        boolean result=userValidator.validMobileFormat("91 954154545");
+        Assert.assertEquals(true,result);
+    }
+
+    @Test
     public void PassWord_Rule_isValid_True() {
         UserValidator userValidator=new UserValidator();
-        boolean result = userValidator.validPasswordRule3("Sampadatir123");
+        boolean result = userValidator.validPasswordRule4("Sampadatir@123");
         Assert.assertEquals(true,result);
 
     }
@@ -74,7 +88,8 @@ public class UserValidation {
     @Test
     public void PassWord_Rule_isInvalid_False() {
         UserValidator userValidator=new UserValidator();
-        boolean result= userValidator.validPasswordRule3("Sampadatir");
+        boolean result= userValidator.validPasswordRule4("Sampadatir");
         Assert.assertEquals(true,result);
     }
+
 }

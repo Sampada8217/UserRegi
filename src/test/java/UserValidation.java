@@ -55,6 +55,7 @@ public class UserValidation {
         Assert.assertEquals(true,result);
     }
 
+
     @Test
     public void MobileNo_isValidFormat_True() {
         UserValidator userValidator=new UserValidator();
@@ -63,11 +64,17 @@ public class UserValidation {
     }
 
     @Test
-    public void PassWord_Rule1_isValid_True() {
+    public void PassWord_Rule_isValid_True() {
         UserValidator userValidator=new UserValidator();
-        boolean result = userValidator.validPasswordRule2("Sampadatir");
+        boolean result = userValidator.validPasswordRule3("Sampadatir123");
         Assert.assertEquals(true,result);
 
     }
 
+    @Test
+    public void PassWord_Rule_isInvalid_False() {
+        UserValidator userValidator=new UserValidator();
+        boolean result= userValidator.validPasswordRule3("Sampadatir");
+        Assert.assertEquals(true,result);
+    }
 }

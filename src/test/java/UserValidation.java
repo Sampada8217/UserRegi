@@ -43,7 +43,14 @@ public class UserValidation {
         UserValidator userValidator = new UserValidator();
         boolean result =userValidator.validLastName("tirthkar");
         Assert.assertEquals(true,result);
+ 
+    }
 
+    @Test
+    public void Email_isValid_True() {
+        UserValidator userValidator=new UserValidator();
+        boolean result=userValidator.validEmailId("sampada@bridgelabz.co.in");
+        Assert.assertEquals(true,result);
     }
     
 }

@@ -3,8 +3,8 @@ public class UserValidator {
 
 
     public boolean validFirstName(String fname) {
-    String pattern ="[A-Z]{1}[a-z]{3,}";
-    if(fname.matches(pattern))
+    String patternFirstName ="[A-Z]{1}[a-z]{3,}";
+    if(fname.matches(patternFirstName))
     {
         return true;
     }
@@ -15,8 +15,8 @@ public class UserValidator {
 
     }
     public static boolean validLastName(String lname) {
-        String pattern="[A-Z]{1}[a-z]{3,}";
-        if(lname.matches(pattern))
+        String patternLastName="[A-Z]{1}[a-z]{3,}";
+        if(lname.matches(patternLastName))
         {
             return true;
         }
@@ -26,4 +26,16 @@ public class UserValidator {
         }
     }
 
+
+    public boolean validEmailId(String email) {
+        String patternEmail="[0-9a-zA-Z]+([._+-][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})";
+        if(email.matches(patternEmail))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }

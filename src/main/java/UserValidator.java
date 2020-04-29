@@ -1,7 +1,5 @@
 public class UserValidator {
 
-
-
     public boolean validFirstName(String fname) {
     String patternFirstName ="[A-Z]{1}[a-z]{3,}";
     if(fname.matches(patternFirstName))
@@ -9,9 +7,7 @@ public class UserValidator {
         return true;
     }
     else
-    {
         return false;
-    }
 
     }
     public static boolean validLastName(String lname) {
@@ -21,22 +17,16 @@ public class UserValidator {
             return true;
         }
         else
-        {
             return false;
-        }
     }
 
 
     public boolean validEmailId(String email) {
-        String patternEmail="[0-9a-zA-Z]+([._+-][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})";
-        if(email.matches(patternEmail))
-        {
+        String patternEmail = "[0-9a-zA-Z]+([._+-][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})";
+        if (email.matches(patternEmail)) {
             return true;
-        }
-        else
-        {
+        } else
             return false;
-        }
     }
 
     public boolean validMobileFormat(String mobile) {
@@ -47,21 +37,14 @@ public class UserValidator {
           return true;
         }
         else
-        {
             return false;
-        }
-
-
     }
 
     public boolean validPasswordRule(String pass) {
-       String patternPassword="((?=.*[a-z])(?=.*d)(?=.*[@#$%])(?=.*[A-Z]).{8,})";
-        if(pass.matches(patternPassword))
-        {
+        String patternPassword = "((?=.*[a-z])(?=.*d)(?=.*[@#$%])(?=.*[A-Z]).{8,})";
+        if (pass.matches(patternPassword)) {
             return true;
-        }
-        else
+        } else
             return false;
-
     }
 }

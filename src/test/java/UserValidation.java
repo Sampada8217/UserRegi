@@ -3,80 +3,80 @@ import org.junit.Test;
 
 public class UserValidation {
     @Test
-    public void FirstName_isProper_True() {
+    public void givenFirstName_whenIsProper_ShouldReturnTrue() {
         UserValidator userValidator = new UserValidator();
-       boolean result = userValidator.validFirstName("Sampada");
+        boolean result = userValidator.validFirstName("Sampada");
         Assert.assertEquals(true,result);
     }
 
     @Test
-    public void FirstName_isShort_False() {
+    public void givenFirstName_whenIsShort_shouldReturnFalse() {
         UserValidator userValidator = new UserValidator();
         boolean result = userValidator.validFirstName("sa");
-        Assert.assertEquals(true,result);
+        Assert.assertEquals(false,result);
     }
 
     @Test
-    public void FirstName_isSmall_False() {
+    public void givenFirstName_whenIsSmall_shouldReturnFalse() {
         UserValidator userValidator = new UserValidator();
         boolean result = userValidator.validFirstName("sampada");
-        Assert.assertEquals(true,result);
+        Assert.assertEquals(false,result);
 
     }
 
     @Test
-    public void LastName_isProper_True() {
+    public void givenLastName_whenIsProper_shouldReturnTrue() {
         UserValidator userValidator = new UserValidator();
         boolean result = UserValidator.validLastName("Tirthkar");
         Assert.assertEquals(true,result);
     }
 
     @Test
-    public void LastName_isShort_False() {
+    public void givenLastName_whenIsShort_shouldReturnFalse() {
         UserValidator userValidator = new UserValidator();
         boolean result= userValidator.validLastName("ti");
-        Assert.assertEquals(true,result);
+        Assert.assertEquals(false,result);
     }
 
     @Test
-    public void LastName_isSmall_False() {
+    public void givenLastName_whenIsSmall_shouldReturnFalse() {
         UserValidator userValidator = new UserValidator();
         boolean result =userValidator.validLastName("tirthkar");
-        Assert.assertEquals(true,result);
+        Assert.assertEquals(false,result);
  
     }
 
     @Test
-    public void Email_isValid_True() {
+    public void givenEmail_whenIsValid_shouldReturnTrue() {
         UserValidator userValidator=new UserValidator();
         boolean result=userValidator.validEmailId("sampada@bridgelabz.co.in");
         Assert.assertEquals(true,result);
     }
 
     @Test
-    public void Email_isInvalid_False() {
+    public void givenEmail_whenIsInvalid_shouldReturnFalse() {
         UserValidator userValidator=new UserValidator();
         boolean result=userValidator.validEmailId("sampada@yahoo");
-        Assert.assertEquals(true,result);
+        Assert.assertEquals(false,result);
 
     }
 
     @Test
-    public void MobileNo_isValidFormat_True() {
+    public void givenMobileNo_whenIsValidFormat_shouldReturnTrue() {
         UserValidator userValidator=new UserValidator();
         boolean result=userValidator.validMobileFormat("91 9541545454");
         Assert.assertEquals(true,result);
     }
 
     @Test
-    public void MobileNo_isInvalid_False() {
+    public void givenMobileNo_whenIsInvalid_shouldReturnFalse() {
         UserValidator userValidator=new UserValidator();
         boolean result=userValidator.validMobileFormat("91 954154545");
-        Assert.assertEquals(true,result);
+        Assert.assertEquals(false,result);
     }
 
     @Test
-    public void PassWord_Rule_isValid_True() {
+    public void givenPassWord_Rule_whenIsValid_shouldReturnTrue() {
         UserValidator userValidator=new UserValidator();
         boolean result = userValidator.validPasswordRule("SamPada@1");
         Assert.assertEquals(true,result);
@@ -84,10 +84,10 @@ public class UserValidation {
     }
 
     @Test
-    public void PassWord_Rule_isInvalid_False() {
+    public void givenPassWord_Rule_whenIsInvalid_shouldReturnFalse() {
         UserValidator userValidator=new UserValidator();
         boolean result= userValidator.validPasswordRule("Sampadatir");
-        Assert.assertEquals(true,result);
+        Assert.assertEquals(false,result);
     }
 
 }
